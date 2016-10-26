@@ -10,7 +10,7 @@
 
     <!-- CSS -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.2.1/material.deep_purple-deep_orange.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.green-teal.min.css" />
     <link rel="stylesheet" href="static/styles/login.css">
 
   </head>
@@ -27,12 +27,12 @@
             <div class="mdl-card__supporting-text">
               <div class="mdl-textfield mdl-js-textfield">
                 <input class="mdl-textfield__input" type="text" id="titulo" name="titulo">
-                <label class="mdl-textfield__label" for="titulo">Titulo</label>
+                <label class="mdl-textfield__label" for="titulo">Titulo do Post</label>
                 
               </div>
               <div class="mdl-textfield mdl-js-textfield">
                 <input class="mdl-textfield__input" type="text" id="mensagem" name="mensagem">
-                <label class="mdl-textfield__label" for="mensagem">Mensagem</label>
+                <label class="mdl-textfield__label" for="mensagem">Escreva sua mensagem ...</label>
                
               </div>
             </div>
