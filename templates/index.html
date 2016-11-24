@@ -17,7 +17,70 @@
 
   <body>
 
-    Esse vai ser nossa página principal, por enquanto ainda não temos conteúdo =/
+    
+          <span class="mdl-layout-title">Escalonador e seus Algorítmos de escalonamento: "Shortest Process Next"</span>
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                      mdl-textfield--floating-label mdl-textfield--align-right">
+            <label class="mdl-button mdl-js-button mdl-button--icon"
+                   for="waterfall-exp">
+              
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" name="sample"
+                     id="waterfall-exp" />
+            </div>
+          </div>
+        </div>
+        <!-- Bottom row, not visible on scroll -->
+        <div class="mdl-layout__header-row">          
+	<div class="mdl-layout-spacer"></div>
+          <!-- Navigation -->
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Início</a>
+	
+           
+          </nav>
+        </div>
+
+      </header>
+	<main>
+<br>
+<br>
+<h1 style="color:Green">O Escalonador</h1>
+<br>
+<p>O escalonador é um processo que controla os demais, quando há, por exemplo, mais de um processo ou thread competindo pela CPU, o escalonador é o responsável por fazer a escolha destes. O escalonamento de processos é uma tarefa complicada, pois nenhum algoritmo é totalmente eficiente e a prova de falhas, principalmente em se tratando de sistemas interativos, pois a interação com o usuário é fundamental para este sistema onde quem o utiliza procura respostas rápidas e a todo o momento processos são interrompidos pelo usuário. O escalonador do SO utiliza alguns critérios de escalonamento, como: a taxa de utilização de CPU, que é a fração de tempo durante a qual ela está sendo ocupada; throughput que são números de processos terminados por unidade de tempo; turnaround que é o tempo transcorrido desde o momento em que o software entra e o instante em que termina sua execução; tempo de resposta: intervalo entre a chegada ao sistema e inicio de sua execução; tempo de espera: soma dos períodos em que o programa estava no seu estado pronto.
+Responsáveis por essa tarefa são algoritmos que são entendidos mais facilmente, mas na pratica os sistemas operacionais utilizam combinações deles para melhor escalonar os processos.
+<br>
+Vamos apresentar a seguir um dos algorítmos de escalonamento, o algorítmo "Shortest Process Next"(SPN).</p>
+<br>
+<hr>
+<h1 style="color:Green">A ideia do algorítmo Shortest Process Next (SPN)</h1>
+<br> 
+<p>A principal ideia do algorítmo é selecionar os menores processos para a CPU afim de ganhar tempo de execução, formando atrás deste processo uma fila de outros processos em ordem crescente de tempo de execução para sistemas em lote.</p>
+<br>
+<hr>
+<h1 style="color:Green">O problema e a solução para o SPN</h1>
+<br> 
+<p>Seu único problema é que não se pode saber qual dos processos executáveis é o mais curto. Uma saída é realizar uma estimativa baseada no comportamento passado e, então, executar o processo cujo o tempo de execução estimado seja mais baixo. A técnica de estimar o valor seguinte da série, tomando a média ponderada do valor sendo medido e a estimativa anterior, é algumas vezes chamada de aging ou "envelhecimento". Essa técnica é aplicável a muitas situações nas quais é preciso uma previsão baseada nos valores anteriores.</p>
+<br>
+<hr>
+<h1 style="color:Green">As características do Algoritmo</h1>
+<br>
+<p>O cálculo de cada tempo médio é feito a partir da próxima alocação de CPU, ou seja, o processo que utilizar a CPU por menos tempo será executado primeiro. Existem dois esquemas já conhecidos desse tipo de escalonamento:
+<br>
+Não Preemptivo: Uma vez a CPU atribuída a um processo, este não pode ser interrompido até completar a execução do processo.
+<br>
+Preemptivo: Se um novo processo chega ao estado "pronto" com um tempo de alocação menor que o tempo restante do processo em execução, então há preempção (interrupção).
+<br>
+Suas vantagens: O emprego deste algoritmo é vantajoso devido à sua simplicidade e também porque maximiza o rendimento do processo (em termos de número de processos de execução para conclusão em um determinado período de tempo). Ele também minimiza a quantidade média de tempo que cada processo tem que esperar até que a sua execução esteja completa. No entanto, ele tem o potencial de starvation para processos que requerem um longo período de tempo, se os processos curtos são continuamente adicionados.
+<br>
+Suas desvantagem: Podemos dizer que é uma desvantagem, pelo fato do SJF preemptivo (podemos associar o termo preemptivo como prioridade, que na verdade não deixa de ser), é o bloqueio por tempo indefinido ou starvation(podemos associar o termo starvation como stagnação, que na verdade não deixa de ser). Um algoritmo de escalonamento por prioridade (preemptivo)pode deixar que alguns processos de baixa prioridade fiquem esperando indefinidamente pela CPU.</p>
+
+
+	
+      </main>
+    </div>
 
     <br>
 
